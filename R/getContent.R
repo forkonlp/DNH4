@@ -21,6 +21,7 @@ getContent <- function(url = url) {
       
       datetime <- tem %>% html_nodes("span.info_view span.txt_info") %>% html_text()
       Encoding(datetime) <- "UTF-8"
+      datetime <- datetime[nchar(datetime)>18]
       datetime <- str_sub(datetime,4,nchar(datetime))
       datetime <- gsub("\\.","-",datetime)
       datetime <- as.POSIXlt(datetime)
@@ -40,8 +41,9 @@ getContent <- function(url = url) {
       Encoding(content) <- "UTF-8"
       content <- str_trim(content,side="both")
       content <- gsub("\r?\n|\r", " ", content)
-      content[c(-length(content),-(length(content)-1))]
+      # content[c(-length(content),-(length(content)-1))]
       content <- paste0("<p>",content,"<p>")
+      content <- paste0(content, collapse = " ")
       
       newsInfo <- data.frame(url = url, datetime = datetime, edittime = edittime, press = press, title = title, content = content, stringsAsFactors = F)
       
