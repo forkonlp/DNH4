@@ -1,4 +1,8 @@
 # D2H4
+[![Travis-CI Build Status](https://travis-ci.org/forkonlp/D2H4.png?branch=master)](https://travis-ci.org/forkonlp/D2H4)
+[![Coverage Status](https://coveralls.io/repos/github/forkonlp/D2H4/badge.svg)](https://coveralls.io/github/forkonlp/D2H4)
+[![License](https://img.shields.io/github/license/mashape/apistatus.svg)](https://opensource.org/licenses/mit-license.php)
+
 
 ## 다음 뉴스 크롤링을 위한 도구
 #### MIT 라이선스로 자유롭게 사용하셔도 좋으나 star는 제작자를 춤추게 합니다.
