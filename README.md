@@ -1,6 +1,6 @@
 # D2H4
 [![Travis-CI Build Status](https://travis-ci.org/forkonlp/D2H4.png?branch=master)](https://travis-ci.org/forkonlp/D2H4)
-[![Coverage Status](https://coveralls.io/repos/github/forkonlp/D2H4/badge.svg)](https://coveralls.io/github/forkonlp/D2H4)
+[![Coverage Status](https://coveralls.io/repos/github/forkonlp/D2H4/badge.svg?branch=master)](https://coveralls.io/github/forkonlp/D2H4?branch=master)
 [![License](https://img.shields.io/github/license/mashape/apistatus.svg)](https://opensource.org/licenses/mit-license.php)
 
 
