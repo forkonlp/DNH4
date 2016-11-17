@@ -49,7 +49,12 @@ getContent <- function(url = url) {
         content <- paste0(content, collapse = " ")
         
         newsInfo <- data.frame(url = url, datetime = datetime, edittime = edittime, press = press, title = title, content = content, stringsAsFactors = F)
+      } else {
+        newsInfo <- data.frame(url = "no news links", datetime = "no news links", edittime = "no news links", press = "no news links", title = "no news links", content = "no news links",
+                               stringsAsFactors = F)
+        return(newsInfo)
       }
+      
     } else {
       
       newsInfo <- data.frame(url = url, datetime = "page is moved.", edittime = "page is moved.", press = "page is moved.", title = "page is moved.", content = "page is moved.",
