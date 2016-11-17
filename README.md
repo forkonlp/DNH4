@@ -6,7 +6,7 @@
 #### 사용하실 때 출처(링크 표기 가능)를 밝혀주시면 감사하겠습니다.
 ######문의는 [forkonlp@gmail.com](mailto:mrchypark@gmail.com)로 주시거나 [이슈](https://github.com/forkonlp/D2H4/issues/new)로 남겨주세요.
 ######[이슈](https://github.com/forkonlp/D2H4/issues)로 남겨주시면 같은 문제를 겪는 분이 해결하는데 도움이 됩니다.
-######[위키](https://github.com/forkonlp/N2H4/wiki/)에 한글 설명이 준비되어 있습니다.
+######[위키](https://github.com/forkonlp/N2H4/wiki/)에 한글 설명이 준비중입니다.
 
 ```
 if (!require("devtools")) install.packages("devtools")
