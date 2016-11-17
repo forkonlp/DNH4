@@ -14,7 +14,7 @@ devtools::install_github("forkonlp/D2H4")
 library(D2H4)
 ```
 
-## v0.1
+## v0.0.1
 
 MIT License.<br>
 Please [let me know](mailto:forkonlp@gmail.com) use this package.
