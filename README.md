@@ -3,7 +3,6 @@
 [![Coverage Status](https://coveralls.io/repos/github/forkonlp/D2H4/badge.svg?branch=master)](https://coveralls.io/github/forkonlp/D2H4?branch=master)
 [![License](https://img.shields.io/github/license/mashape/apistatus.svg)](https://opensource.org/licenses/mit-license.php)
 
-
 ## 다음 뉴스 크롤링을 위한 도구
 #### MIT 라이선스로 자유롭게 사용하셔도 좋으나 star는 제작자를 춤추게 합니다.
 ###### (MIT 라이선스는 마음껏 쓰되, 출처를 표시해달라는 뜻입니다.)
