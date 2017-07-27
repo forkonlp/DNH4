@@ -13,8 +13,11 @@ if (!require("devtools")) install.packages("devtools")
 devtools::install_github("forkonlp/D2H4")
 library(D2H4)
 ```
+## v0.0.2
 
-## v0.1
+다음 뉴스 개편으로 인해 날짜 형식이 조정되어 반영함.
+
+## v0.0.1
 
 MIT License.<br>
 Please [let me know](mailto:forkonlp@gmail.com) use this package.
