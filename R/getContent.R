@@ -13,7 +13,7 @@
 getContent <- function(url = url) {
   
   if(!identical(url,character(0))){
-    tem<-httr::GET(url)
+    tem<-httr::GET(url,user_agent("DNH4 by chanyub.park <mrchypark@gmail.com>"))
     if (tem$status_code==200) {
       if(grepl("^http://v.media.daum.net/v",tem$url)){
       
