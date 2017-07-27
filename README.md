@@ -16,6 +16,9 @@ if (!require("devtools")) install.packages("devtools")
 devtools::install_github("forkonlp/DNH4")
 library(DNH4)
 ```
+## v0.0.2
+
+다음 뉴스 개편으로 인해 날짜 형식이 조정되어 반영함.
 
 ## v0.0.1
 

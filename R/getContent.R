@@ -24,9 +24,9 @@ getContent <- function(url = url) {
         
         datetime <- tem %>% html_nodes("span.info_view span.txt_info") %>% html_text()
         Encoding(datetime) <- "UTF-8"
-        datetime <- datetime[nchar(datetime)==19]
+        datetime <- datetime[nchar(datetime)==20]
         datetime <- str_sub(datetime,4,nchar(datetime))
-        datetime <- gsub("\\.","-",datetime)
+        datetime <- gsub("([0-9]{4})\\.([0-9]{2})\\.([0-9]{2})\\.","\\1-\\2-\\3",datetime)
         datetime <- as.POSIXlt(datetime)
         
         if (length(datetime) == 1) {

@@ -1,8 +1,8 @@
-Package: D2H4
+Package: DNH4
 Type: Package
 Title: Handling method for daum news text crawling.
-Version: 0.0.1
-Date: 2016-11-17
+Version: 0.0.2
+Date: 2017-07-28
 Author: mrchypark
 Maintainer: mrchypark <mrchypark@gmail.com>
 Description: Provides some utils to get korean text sample from news articles
