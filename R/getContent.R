@@ -46,6 +46,7 @@ getContent <- function(url = url) {
         # content[c(-length(content),-(length(content)-1))]
         content <- paste0("<p>",content,"<p>")
         content <- paste0(content, collapse = " ")
+        content <- gsub("<p><p> ","",content)
         
         newsInfo <- data.frame(url = url, datetime = datetime, edittime = edittime, press = press, title = title, content = content, stringsAsFactors = F)
       } else {
