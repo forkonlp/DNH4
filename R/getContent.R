@@ -5,20 +5,19 @@
 #' @param url is daum news link.
 #' @return Get data.frame(url,datetime,press,title,content).
 #' @export
-#' @import RCurl
 #' @import xml2
 #' @import rvest
+#' @inport httr
 #' @import stringr
 
 getContent <- function(url = url) {
   
   if(!identical(url,character(0))){
-    if (RCurl::url.exists(url)) {
-      veri <- curlGetHeaders(url, redirect = TRUE,verify = TRUE)
-      veri <- veri[grep("Location",veri)]
-      if(identical(veri,character(0))){
+    tem<-httr::GET(url)
+    if (tem$status_code==200) {
+      if(grepl("^http://v.media.daum.net/v",tem$url)){
       
-        tem <- read_html(url)
+        tem <- read_html(tem)
         title <- tem %>% html_nodes("div.head_view h3.tit_view") %>% html_text()
         Encoding(title) <- "UTF-8"
         
