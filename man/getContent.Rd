@@ -15,4 +15,3 @@ Get data.frame(url,datetime,press,title,content).
 \description{
 Get daum news content from links.
 }
-

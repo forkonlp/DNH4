@@ -7,7 +7,7 @@
 #' @export
 #' @import xml2
 #' @import rvest
-#' @inport httr
+#' @import httr
 #' @import stringr
 
 getContent <- function(url = url) {

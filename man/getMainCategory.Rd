@@ -12,4 +12,3 @@ Get data.frame(chr:cate_name, chr:url).
 \description{
 Get daum news main category names and ids recently.
 }
-

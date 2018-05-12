@@ -15,4 +15,3 @@ Get data.frame(news_title, news_links).
 \description{
 Get daum news titles and links from target url.
 }
-
