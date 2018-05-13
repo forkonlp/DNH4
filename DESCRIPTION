@@ -19,3 +19,5 @@ Imports:
   httr, 
   xml2,
   rvest
+Suggests: 
+    testthat
