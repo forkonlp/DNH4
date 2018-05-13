@@ -6,6 +6,7 @@
 #' @param limit is number of comment. defult is 10.
 #' @param parentId defult is 0.
 #' @param sort you can select RECOMMEND, LATEST. RECOMMEND is defult.
+#' @param type return type. Defult is data.frame. It may sometimes warnning message.
 #' @return Get data.frame.
 #' @export
 #' @importFrom httr GET content add_headers
@@ -16,7 +17,8 @@ getComment <-
   function(turl = url,
            limit = 10,
            parentId = 0,
-           sort = c("RECOMMEND", "LATEST")) {
+           sort = c("RECOMMEND", "LATEST"),
+           type = c("df","list")) {
     client_id <- httr::GET(turl)
     client_id <- httr::content(client_id)
     client_id <- rvest::html_nodes(client_id, ".alex-area")
@@ -53,12 +55,14 @@ getComment <-
     
     dat <- httr::GET(tar)
     dat <- httr::content(dat)
-    tem <- do.call(rbind, dat)
-    user <- do.call(rbind, tem[,"user"])
-    tem <- as.data.frame(tem)
-    user <- as.data.frame(user)
-    names(user) <- paste0("user_",names(user))
-    dat <- cbind(tem[,c(1,3:15)], user)
+    if (type[1] == "df"){
+      tem <- do.call(rbind, dat)
+      user <- do.call(rbind, tem[,"user"])
+      tem <- as.data.frame(tem)
+      user <- as.data.frame(user)
+      names(user) <- paste0("user_", names(user))
+      dat <- cbind(tem[,c(1,3:15)], user)
+    }
     return(dat)
     
   }
