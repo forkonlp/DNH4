@@ -5,7 +5,7 @@
 \title{Get Comment}
 \usage{
 getComment(turl = url, limit = 10, parentId = 0, sort = c("RECOMMEND",
-  "LATEST"))
+  "LATEST"), type = c("df", "list"))
 }
 \arguments{
 \item{turl}{like 'http://v.media.daum.net/v/20161117210603961'.}
@@ -15,6 +15,8 @@ getComment(turl = url, limit = 10, parentId = 0, sort = c("RECOMMEND",
 \item{parentId}{defult is 0.}
 
 \item{sort}{you can select RECOMMEND, LATEST. RECOMMEND is defult.}
+
+\item{type}{return type. Defult is data.frame. It may sometimes warnning message.}
 }
 \value{
 Get data.frame.
