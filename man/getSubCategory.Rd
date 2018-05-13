@@ -4,7 +4,7 @@
 \alias{getSubCategory}
 \title{Get News Sub Categories}
 \usage{
-getSubCategory(categoryUrl = "/society")
+getSubCategory(categoryUrl = "society")
 }
 \arguments{
 \item{categoryUrl}{Main category url in daum news. Only 1 value is passible. Default is society.}

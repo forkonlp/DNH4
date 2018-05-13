@@ -4,18 +4,18 @@
 #'
 #' @return Get data.frame(chr:cate_name, chr:url).
 #' @export
-#' @import xml2
-#' @import rvest
-#' @import stringr
+#' @importFrom xml2 read_html
+#' @importFrom rvest html_nodes html_text html_attr
 
 getMainCategory <- function() {
   
-  print("This function use internet. If get error, please check the internet.")
-  home <- "http://media.daum.net/breakingnews"
-  titles <- read_html(home) %>% html_nodes("div#mArticle ul.tab_nav li a") %>% html_text()
-  titles <- str_trim(titles)
-  links <- read_html(home) %>% html_nodes("div#mArticle ul.tab_nav li a") %>% html_attr("href")
-  links <- gsub("/breakingnews","",links)
+  root <- "http://media.daum.net/breakingnews"
+  hobj <- xml2::read_html(root)
+  hobj_nodes <- rvest::html_nodes(hobj, "div#mArticle ul.tab_nav li a")
+  titles <- rvest::html_text(hobj_nodes)
+  titles <- trimws(titles)
+  links <- rvest::html_attr(hobj_nodes, "href")
+  links <- gsub("/breakingnews/","",links)
   urls <- data.frame(cate_name=titles,url=links,stringsAsFactors = F)
   urls <- urls[-1,]
   return(urls)

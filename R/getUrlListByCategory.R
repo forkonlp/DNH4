@@ -5,16 +5,16 @@
 #' @param turl is target url daum news.
 #' @return Get data.frame(news_title, news_links).
 #' @export
-#' @import xml2
-#' @import rvest
-#' @import stringr
+#' @importFrom xml2 read_html
+#' @importFrom rvest html_nodes html_text html_attr
 
 getUrlListByCategory <- function(turl = url) {
   
-  tem <- read_html(turl)
-  news_title <- tem %>% rvest::html_nodes("strong.tit_thumb a") %>% rvest::html_text()
+  hobj <- xml2::read_html(turl)
+  hobj_nodes <- rvest::html_nodes(hobj, "strong.tit_thumb a") 
+  news_title <- rvest::html_text(hobj_nodes)
   Encoding(news_title) <- "UTF-8"
-  news_links <- tem %>% rvest::html_nodes("strong.tit_thumb a") %>% rvest::html_attr("href")
+  news_links <- rvest::html_attr(hobj_nodes, "href")
   
   news_lists <- data.frame(news_title = news_title, news_links = news_links, stringsAsFactors = F)
 

@@ -10,14 +10,13 @@
 #' @param sort you can select RECOMMEND, LATEST. RECOMMEND is defult.
 #' @return Get data.frame.
 #' @export
-#' @import httr
-#' @import rvest
-#' @import jsonlite
-#' @import stringr
+#' @importFrom httr GET content
+#' @importFrom xml2 read_html
+#' @importFrom rvest html_nodes html_attr
 
 getComment <- function(turl = url, limit = 10, parentId=0, sort = c("RECOMMEND", "LATEST")) {
   
-  client_id <- GET(turl) %>% content %>% html_nodes(".alex-area") %>% html_attr("data-client-id")
+  client_id <- httr::GET(turl) %>% httr::content %>% html_nodes(".alex-area") %>% html_attr("data-client-id")
   
   tar <- paste0("https://comment.daum.net/auth/credential?client_id=",client_id)
   ad <- add_headers("Referer"=turl)
@@ -32,9 +31,7 @@ getComment <- function(turl = url, limit = 10, parentId=0, sort = c("RECOMMEND",
   
   tar <- paste0("http://comment.daum.net/apis/v1/posts/", comment_info$id, "/comments?parentId=",parentId,"&offset=0&limit=",limit,"&sort=",sort[1])
   
-  
   dat <- GET(tar) %>% content
-  
   return(dat)
   
 }
