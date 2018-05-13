@@ -56,11 +56,12 @@ getContent <- function(turl = url) {
         content <- gsub("\r?\n|\r", " ", content)
         content <- paste0("<p>", content, "<p>")
         content <- paste0(content, collapse = " ")
-        content <- gsub("<p><p> ", "", content)
+        content <- gsub("<p> <p>", " ", content)
+        content <- gsub("<p>", "", content)
         
         newsInfo <-
           data.frame(
-            url = url,
+            url = turl,
             datetime = datetime,
             edittime = edittime,
             press = press,
