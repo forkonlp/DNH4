@@ -16,6 +16,10 @@ if (!require("devtools")) install.packages("devtools")
 devtools::install_github("forkonlp/DNH4")
 library(DNH4)
 ```
+## v0.1.0
+
+댓글 수집 기능을 추가하였습니다. stingr 의존성을 제거하였습니다. 
+
 ## v0.0.2
 
 다음 뉴스 개편으로 인해 날짜 형식이 조정되어 반영하였습니다. 리다이렉트되는 주소를 확인해서 뉴스 사이트가 아니면 우회합니다.

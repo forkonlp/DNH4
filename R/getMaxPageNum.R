@@ -4,20 +4,21 @@
 #'             'http://media.daum.net/breakingnews/politics/president?regDate=20161104'
 #' @return Get numeric
 #' @export
-#' @import xml2
-#' @import rvest
+#' @importFrom xml2 read_html
+#' @importFrom rvest html_node html_attr
 
-getMaxPageNum <- function(turl=url) {
-  
-  tem <- read_html(turl)
-  ifnext <- tem %>% html_node("span.inner_paging a.btn_next")
-  while(class(ifnext)=="xml_node"){
-    nextUrl <- ifnext %>% html_attr("href")
-    nextUrl <- paste0("http://media.daum.net",nextUrl)
-    tem <- read_html(nextUrl)
-    ifnext <- tem %>% html_node("span.inner_paging a.btn_next")
+getMaxPageNum <- function(turl = url) {
+  hobj <- xml2::read_html(turl)
+  ifnext <- rvest::html_node(hobj, "span.inner_paging a.btn_next")
+  while (class(ifnext) == "xml_node") {
+    nextUrl <- html_attr(ifnext, "href")
+    nextUrl <- paste0("http://media.daum.net", nextUrl)
+    hobj <- xml2::read_html(nextUrl)
+    ifnext <- rvest::html_node(hobj, "span.inner_paging a.btn_next")
   }
-  maxPageNum <- tem %>% html_nodes("a.num_page") %>% html_text() %>% as.numeric
+  hobj_nodes <- html_nodes(hobj, "a.num_page")
+  maxPageNum <- html_text(hobj_nodes)
+  maxPageNum <- as.numeric(maxPageNum)
   maxPageNum <- maxPageNum[length(maxPageNum)]
   return(maxPageNum)
   

@@ -8,17 +8,21 @@
 #' @importFrom xml2 read_html
 #' @importFrom rvest html_nodes html_text html_attr
 
-getSubCategory <- function(categoryUrl="society") {
-  
-  root <- paste0("http://media.daum.net/breakingnews/",categoryUrl)
+getSubCategory <- function(categoryUrl = "society") {
+  root <- paste0("http://media.daum.net/breakingnews/", categoryUrl)
   hobj <- read_html(root)
-  hobj_nodes <- html_nodes(hobj, "div.box_subtab ul li a") 
+  hobj_nodes <- html_nodes(hobj, "div.box_subtab ul li a")
   titles <- html_text(hobj_nodes)
   titles <- trimws(titles)
   links <- html_attr(hobj_nodes, "href")
-  links <- gsub(paste0("/breakingnews",categoryUrl),"",links)
-  urls <- data.frame(sub_cate_name=titles,url=links,stringsAsFactors = F)
-  urls <- urls[-1,]
+  links <- gsub(paste0("/breakingnews", categoryUrl), "", links)
+  urls <-
+    data.frame(
+      sub_cate_name = titles,
+      url = links,
+      stringsAsFactors = F
+    )
+  urls <- urls[-1, ]
   return(urls)
   
 }

@@ -4,10 +4,10 @@
 \alias{getContent}
 \title{Get Content}
 \usage{
-getContent(url = url)
+getContent(turl = url)
 }
 \arguments{
-\item{url}{is daum news link.}
+\item{turl}{is daum news link.}
 }
 \value{
 Get data.frame(url,datetime,press,title,content).

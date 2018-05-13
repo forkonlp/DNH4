@@ -1,8 +1,8 @@
 Package: DNH4
 Type: Package
 Title: Handling method for daum news text crawling.
-Version: 0.0.2
-Date: 2017-07-28
+Version: 0.1.0
+Date: 2018-05-13
 Author: mrchypark
 Maintainer: mrchypark <mrchypark@gmail.com>
 Description: Provides some utils to get korean text sample from news articles
@@ -12,9 +12,10 @@ URL: http://github.com/forkonlp/D2H4
 BugReports: http://github.com/forkonlp/D2H4/issues
 RoxygenNote: 6.0.1
 language: r(>=3.3.0)
+Encoding: UTF-8
 cache: packages
 LazyData: true
-Imports: 
+Imports:
+  httr, 
   xml2,
-  rvest,
-  stringr
+  rvest

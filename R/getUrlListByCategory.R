@@ -9,15 +9,19 @@
 #' @importFrom rvest html_nodes html_text html_attr
 
 getUrlListByCategory <- function(turl = url) {
-  
   hobj <- xml2::read_html(turl)
-  hobj_nodes <- rvest::html_nodes(hobj, "strong.tit_thumb a") 
+  hobj_nodes <- rvest::html_nodes(hobj, "strong.tit_thumb a")
   news_title <- rvest::html_text(hobj_nodes)
   Encoding(news_title) <- "UTF-8"
   news_links <- rvest::html_attr(hobj_nodes, "href")
   
-  news_lists <- data.frame(news_title = news_title, news_links = news_links, stringsAsFactors = F)
-
+  news_lists <-
+    data.frame(
+      news_title = news_title,
+      news_links = news_links,
+      stringsAsFactors = F
+    )
+  
   return(news_lists)
   
 }
