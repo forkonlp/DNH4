@@ -3,8 +3,9 @@ Type: Package
 Title: Handling method for daum news text crawling.
 Version: 0.1.0
 Date: 2018-05-13
-Author: mrchypark
-Maintainer: mrchypark <mrchypark@gmail.com>
+Authors@R: c(
+    person("ChanYub", "Park", , "mrchypark@gmail.com", c("aut", "cre"))
+    )
 Description: Provides some utils to get korean text sample from news articles
             in daum which is popular news portal servise in korea.
 License: MIT + file LICENSE
