@@ -52,7 +52,7 @@ getContent <- function(turl = url) {
           rvest::html_nodes(hobj, "div.article_view section p")
         content <- rvest::html_text(hobj_nodes)
         Encoding(content) <- "UTF-8"
-        content <- trimws(content, side = "both")
+        content <- trimws(content)
         content <- gsub("\r?\n|\r", " ", content)
         content <- paste0("<p>", content, "<p>")
         content <- paste0(content, collapse = " ")
