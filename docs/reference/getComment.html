@@ -68,7 +68,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">DNH4</a>
-        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">0.1.0</span>
+        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">0.1.1</span>
       </span>
     </div>
 
@@ -119,7 +119,7 @@
     </div>
 
     <pre class="usage"><span class='fu'>getComment</span>(<span class='kw'>turl</span> <span class='kw'>=</span> <span class='no'>url</span>, <span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>10</span>, <span class='kw'>parentId</span> <span class='kw'>=</span> <span class='fl'>0</span>, <span class='kw'>sort</span> <span class='kw'>=</span> <span class='fu'>c</span>(<span class='st'>"RECOMMEND"</span>,
-  <span class='st'>"LATEST"</span>))</pre>
+  <span class='st'>"LATEST"</span>), <span class='kw'>type</span> <span class='kw'>=</span> <span class='fu'>c</span>(<span class='st'>"df"</span>, <span class='st'>"list"</span>))</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -130,7 +130,7 @@
     </tr>
     <tr>
       <th>limit</th>
-      <td><p>is number of comment. defult is 10.</p></td>
+      <td><p>is number of comment. defult is 10. You can set "all" to get all comments.</p></td>
     </tr>
     <tr>
       <th>parentId</th>
@@ -139,6 +139,10 @@
     <tr>
       <th>sort</th>
       <td><p>you can select RECOMMEND, LATEST. RECOMMEND is defult.</p></td>
+    </tr>
+    <tr>
+      <th>type</th>
+      <td><p>return type. Defult is data.frame. It may sometimes warnning message.</p></td>
     </tr>
     </table>
     

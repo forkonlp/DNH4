@@ -1,8 +1,8 @@
 Package: DNH4
 Type: Package
-Title: Handling method for daum news text crawling.
-Version: 0.1.0
-Date: 2018-05-13
+Title: Crawling for daum news text
+Version: 0.1.1
+Date: 2018-05-15
 Authors@R: c(
     person("ChanYub", "Park", , "mrchypark@gmail.com", c("aut", "cre"))
     )

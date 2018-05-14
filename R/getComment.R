@@ -3,7 +3,7 @@
 #' Get daum news comments
 #'
 #' @param turl like 'http://v.media.daum.net/v/20161117210603961'.
-#' @param limit is number of comment. defult is 10.
+#' @param limit is number of comment. defult is 10. You can set "all" to get all comments. 
 #' @param parentId defult is 0.
 #' @param sort you can select RECOMMEND, LATEST. RECOMMEND is defult.
 #' @param type return type. Defult is data.frame. It may sometimes warnning message.
@@ -40,6 +40,10 @@ getComment <-
       httr::add_headers("Authorization" = paste0("Bearer ", auth$access_token))
     comment_info <- httr::GET(tar, ad)
     comment_info <- httr::content(comment_info)
+    
+    if(limit == "all"){
+      limit <- comment_info$commentCount
+    }
     
     tar <-
       paste0(

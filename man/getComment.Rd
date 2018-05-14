@@ -10,7 +10,7 @@ getComment(turl = url, limit = 10, parentId = 0, sort = c("RECOMMEND",
 \arguments{
 \item{turl}{like 'http://v.media.daum.net/v/20161117210603961'.}
 
-\item{limit}{is number of comment. defult is 10.}
+\item{limit}{is number of comment. defult is 10. You can set "all" to get all comments.}
 
 \item{parentId}{defult is 0.}
 
