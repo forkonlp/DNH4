@@ -59,14 +59,21 @@ getComment <-
     
     dat <- httr::GET(tar)
     dat <- httr::content(dat)
-    if (type[1] == "df"){
+    if (type[1] == "df" & length(dat)!=0){
       tem <- do.call(rbind, dat)
       user <- do.call(rbind, tem[,"user"])
       tem <- as.data.frame(tem)
       user <- as.data.frame(user)
       names(user) <- paste0("user_", names(user))
       dat <- cbind(tem[,c(1,3:15)], user)
+      dat <- apply(dat, 2, unlist)
+      if(class(dat) == "character"){
+        dat <- t(dat)
+      }
+      dat <- data.frame(dat,stringsAsFactors = F)
+    }
+    if(identical(dat,list())){
+      dat <- c()
     }
     return(dat)
-    
   }

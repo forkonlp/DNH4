@@ -1,3 +1,8 @@
+## DNH4 0.1.2
+
+* `getComment()` 함수가 댓글이 없을때 `NULL`, 한개 일때, 여러개 일때 동작하도록 개선했습니다. 
+* The `getComment ()` function has been improved to work when there are no comments, `NULL`, one, and several.
+
 ## DNH4 0.1.1
 
 * `getComment()` 함수에서 `limit` 인자에 `all` 을 사용하면 전체를 가져오도록 추가했습니다.
