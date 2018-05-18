@@ -1,3 +1,8 @@
+## DNH4 0.1.3.1
+
+* `getComment()` 함수의 결과에서 `user_url` 컬럼을 제거하였습니다.
+* Removed the `user_url` column from the result of the `getComment()` function.
+
 ## DNH4 0.1.3
 
 * `getComment()` 함수의 출력이 `data.frame`으로 잘 동작하도록 개선했습니다.

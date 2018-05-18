@@ -66,7 +66,8 @@ getComment <-
         dat <- lapply(dat, function(x) {x[c("icon")] <- NULL;x})
       }
       tem <- do.call(rbind, dat)
-      user <- do.call(rbind, tem[,"user"])
+      user <- lapply(tem[,"user"], function(x){x[c("url")]<-NULL;x})
+      user <- do.call(rbind, user)
       tem <- as.data.frame(tem)
       user <- as.data.frame(user)
       names(user) <- paste0("user_", names(user))
