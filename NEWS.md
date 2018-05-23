@@ -1,7 +1,17 @@
-## DNH4 0.1.3
+## DNH4 0.1.3.2
 
 * `getContent()` 함수내 datetime 객체를 글자수 처리 방식에서 정규식 처리 방식으로 수정하였습니다.
 * We modified the datetime object in the `getContent ()` function to the regular expression method in the character processing method.
+
+## DNH4 0.1.3.1
+
+* `getComment()` 함수의 결과에서 `user_url` 컬럼을 제거하였습니다.
+* Removed the `user_url` column from the result of the `getComment()` function.
+
+## DNH4 0.1.3
+
+* `getComment()` 함수의 출력이 `data.frame`으로 잘 동작하도록 개선했습니다.
+* The output of the `getCommentb()` function has been modified to work with `data.frame`.
 
 ## DNH4 0.1.2
 

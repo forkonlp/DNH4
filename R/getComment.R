@@ -12,6 +12,7 @@
 #' @importFrom httr GET content add_headers
 #' @importFrom xml2 read_html
 #' @importFrom rvest html_nodes html_attr
+#' @importFrom tidyr unnest
 
 getComment <-
   function(turl = url,
@@ -60,17 +61,20 @@ getComment <-
     dat <- httr::GET(tar)
     dat <- httr::content(dat)
     if (type[1] == "df" & length(dat)!=0){
+      chk<-unlist(lapply(dat, function(x) x$icon))
+      if(!is.null(chk)){
+        dat <- lapply(dat, function(x) {x[c("icon")] <- NULL;x})
+      }
       tem <- do.call(rbind, dat)
-      user <- do.call(rbind, tem[,"user"])
+      user <- lapply(tem[,"user"], function(x){x[c("url")]<-NULL;x})
+      user <- do.call(rbind, user)
       tem <- as.data.frame(tem)
       user <- as.data.frame(user)
       names(user) <- paste0("user_", names(user))
       dat <- cbind(tem[,c(1,3:15)], user)
-      dat <- apply(dat, 2, unlist)
-      if(class(dat) == "character"){
-        dat <- t(dat)
+      if(nrow(dat)!=1){
+        dat <- tidyr::unnest(dat) 
       }
-      dat <- data.frame(dat,stringsAsFactors = F)
     }
     if(identical(dat,list())){
       dat <- c()

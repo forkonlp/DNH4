@@ -1,6 +1,6 @@
-pandoc: 1.19.2.1
+pandoc: 2.1.3
 pkgdown: 1.0.0.9000
-pkgdown_sha: 90867f97221e9bd1c7a997f870eff28eb1083411
+pkgdown_sha: 3d28bb96434232e5204b0d57d55e4ed13af3a2a7
 articles: []
 urls:
   reference: http://forkonlp.github.io/DNH4/reference
