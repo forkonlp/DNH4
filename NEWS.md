@@ -1,3 +1,8 @@
+## DNH4 0.1.3
+
+* `getContent()` 함수내 datetime 객체를 글자수 처리 방식에서 정규식 처리 방식으로 수정하였습니다.
+* We modified the datetime object in the `getContent ()` function to the regular expression method in the character processing method.
+
 ## DNH4 0.1.2
 
 * `getComment()` 함수가 댓글이 없을때 `NULL`, 한개 일때, 여러개 일때 동작하도록 개선했습니다. 

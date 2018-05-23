@@ -26,9 +26,9 @@ getContent <- function(turl = url) {
           rvest::html_nodes(hobj, "span.info_view span.txt_info")
         datetime <- rvest::html_text(hobj_nodes)
         Encoding(datetime) <- "UTF-8"
-        datetime <- datetime[nchar(datetime) == 20]
         datetime <- gsub("[^0-9.: ]","",datetime)
         datetime <- trimws(datetime)
+        datetime <- datetime[nchar(datetime)>0]
         datetime <-
           gsub("([0-9]{4})\\.([0-9]{2})\\.([0-9]{2})\\.",
                "\\1-\\2-\\3",
