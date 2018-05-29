@@ -18,3 +18,10 @@ test_that("get many comment work", {
   chk <- nrow(tem)>1
   expect(chk, T)
 })
+
+test_that("get all comment work", {
+  tar <- "http://v.media.daum.net/v/20180516162315753"
+  tem <- getComment(tar,limit="all")
+  chk <- nrow(tem)>1
+  expect(chk, T)
+})

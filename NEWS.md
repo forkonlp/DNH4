@@ -1,3 +1,8 @@
+## DNH4 0.1.3.3
+
+* `getComment()` 함수의 결과에서 `user_icon` 컬럼을 제거하였습니다.
+* Removed the `user_icon` column from the result of the `getComment()` function.
+
 ## DNH4 0.1.3.2
 
 * `getContent()` 함수내 datetime 객체를 글자수 처리 방식에서 정규식 처리 방식으로 수정하였습니다.
