@@ -1,4 +1,5 @@
 # DNH4
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
 [![lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 [![Travis build status](https://travis-ci.org/forkonlp/DNH4.svg?branch=master)](https://travis-ci.org/forkonlp/DNH4)
 [![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/forkonlp/DNH4?branch=master&svg=true)](https://ci.appveyor.com/project/forkonlp/DNH4)
@@ -23,3 +24,19 @@ Please [let me know](mailto:forkonlp@gmail.com) use this package.
 
 Please note that this project is released with a [Contributor Code of Conduct](CODE_OF_CONDUCT.md).
 By participating in this project you agree to abide by its terms.
+
+## Contributors ✨
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore -->
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/jky4098"><img src="https://avatars3.githubusercontent.com/u/53418482?v=4" width="100px;" alt="jky4098"/><br /><sub><b>jky4098</b></sub></a><br /><a href="https://github.com/forkonlp/DNH4/issues?q=author%3Ajky4098" title="Bug reports">🐛</a></td>
+  </tr>
+</table>
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
