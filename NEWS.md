@@ -1,5 +1,13 @@
 # DNH4 0.1.4
 
+* `getComment()` 함수의 auth 부분을 수정하였습니다.
+* `getComment()` 함수에서 encoding 부분을 지정하였습니다.
+* `getContent()` 함수에서 url 체크를 변경하였습니다.
+
+* Fix auth part of `getComment()` function.
+* Set encoding to remove message of `getComment()` function.
+* Change url check of `getContent()` function.
+
 ## DNH4 0.1.3.3
 
 * `getComment()` 함수의 결과에서 `user_icon` 컬럼을 제거하였습니다.
