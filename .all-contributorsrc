@@ -1,0 +1,23 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "jky4098",
+      "name": "jky4098",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/53418482?v=4",
+      "profile": "https://github.com/jky4098",
+      "contributions": [
+        "bug"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "DNH4",
+  "projectOwner": "forkonlp",
+  "repoType": "github",
+  "repoHost": "https://github.com"
+}
