@@ -4,8 +4,8 @@
 \alias{getComment}
 \title{Get Comment}
 \usage{
-getComment(turl = url, limit = 10, parentId = 0, sort = c("RECOMMEND",
-  "LATEST"), type = c("df", "list"))
+getComment(turl = url, limit = 10, parentId = 0,
+  sort = c("RECOMMEND", "LATEST"), type = c("df", "list"))
 }
 \arguments{
 \item{turl}{like 'http://v.media.daum.net/v/20161117210603961'.}

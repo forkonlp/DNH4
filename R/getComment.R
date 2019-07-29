@@ -3,7 +3,7 @@
 #' Get daum news comments
 #'
 #' @param turl like 'http://v.media.daum.net/v/20161117210603961'.
-#' @param limit is number of comment. defult is 10. You can set "all" to get all comments. 
+#' @param limit is number of comment. defult is 10. You can set "all" to get all comments.
 #' @param parentId defult is 0.
 #' @param sort you can select RECOMMEND, LATEST. RECOMMEND is defult.
 #' @param type return type. Defult is data.frame. It may sometimes warnning message.
@@ -19,15 +19,18 @@ getComment <-
            limit = 10,
            parentId = 0,
            sort = c("RECOMMEND", "LATEST"),
-           type = c("df","list")) {
+           type = c("df", "list")) {
     client_id <- httr::GET(turl)
     client_id <- httr::content(client_id)
     client_id <- rvest::html_nodes(client_id, ".alex-area")
     client_id <- rvest::html_attr(client_id, "data-client-id")
     
     tar <-
-      paste0("https://comment.daum.net/auth/credential?client_id=",
-             client_id)
+      paste0(
+        "https://comment.daum.net/oauth/token?grant_type=alex_credentials&client_id=",
+        client_id
+      )
+    
     ad <- httr::add_headers("Referer" = turl)
     auth <- httr::GET(tar, ad)
     auth <- httr::content(auth)
@@ -40,9 +43,9 @@ getComment <-
     ad <-
       httr::add_headers("Authorization" = paste0("Bearer ", auth$access_token))
     comment_info <- httr::GET(tar, ad)
-    comment_info <- httr::content(comment_info)
+    comment_info <- httr::content(comment_info, encoding = "UTF-8")
     
-    if(limit == "all"){
+    if (limit == "all") {
       limit <- comment_info$commentCount
     }
     
@@ -60,23 +63,60 @@ getComment <-
     
     dat <- httr::GET(tar)
     dat <- httr::content(dat)
-    if (type[1] == "df" & length(dat)!=0){
-      chk<-unlist(lapply(dat, function(x) x$icon))
-      if(!is.null(chk)){
-        dat <- lapply(dat, function(x) {x[c("icon")] <- NULL;x})
+    if (type[1] == "df" & length(dat) != 0) {
+      chk <- unlist(lapply(dat, function(x)
+        x$icon))
+      if (!is.null(chk)) {
+        dat <- lapply(dat, function(x) {
+          x[c("icon")] <- NULL
+          x
+        })
       }
       tem <- do.call(rbind, dat)
-      user <- lapply(tem[,"user"], function(x){x[c("url","icon")]<-NULL;x})
+      user <-
+        lapply(tem[, "user"], function(x) {
+          x[c("url", "icon")] <- NULL
+          x
+        })
       user <- do.call(rbind, user)
       tem <- as.data.frame(tem)
       user <- as.data.frame(user)
       names(user) <- paste0("user_", names(user))
-      dat <- cbind(tem[,c(1,3:15)], user)
-      if(nrow(dat)!=1){
-        dat <- tidyr::unnest(dat) 
+      dat <- cbind(tem[, c(1, 3:15)], user)
+      if (nrow(dat) != 1) {
+        dat <-
+          tidyr::unnest(
+            dat,
+            cols = c(
+              id,
+              postId,
+              forumId,
+              parentId,
+              type,
+              status,
+              flags,
+              content,
+              createdAt,
+              updatedAt,
+              childCount,
+              likeCount,
+              dislikeCount,
+              recommendCount,
+              user_id,
+              user_status,
+              user_type,
+              user_flags,
+              user_username,
+              user_roles,
+              user_providerId,
+              user_providerUserId,
+              user_displayName,
+              user_commentCount
+            )
+          )
       }
     }
-    if(identical(dat,list())){
+    if (identical(dat, list())) {
       dat <- c()
     }
     return(dat)

@@ -15,7 +15,7 @@ getContent <- function(turl = url) {
       httr::GET(turl,
                 httr::user_agent("DNH4 by chanyub.park <mrchypark@gmail.com>"))
     if (tem$status_code == 200) {
-      if (grepl("^http://v.media.daum.net/v", tem$url)) {
+      if (grepl("^https://news.v.daum.net/v", tem$url)) {
         hobj <- xml2::read_html(tem)
         hobj_nodes <-
           rvest::html_nodes(hobj, "div.head_view h3.tit_view")
