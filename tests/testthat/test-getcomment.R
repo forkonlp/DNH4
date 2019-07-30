@@ -10,12 +10,14 @@ test_that("get one comment work", {
 test_that("get zero comment work", {
   tar <- "http://v.media.daum.net/v/20180516222212362"
   tem <- getComment(tar)
+  print(tem)
   expect(is.null(tem), T)
 })
 
 test_that("get many comment work", {
   tar <- "http://v.media.daum.net/v/20180516162315753"
   tem <- getComment(tar)
+  print(tem)
   chk <- nrow(tem)>1
   expect(chk, T)
 })
@@ -23,6 +25,7 @@ test_that("get many comment work", {
 test_that("get all comment work", {
   tar <- "http://v.media.daum.net/v/20180516162315753"
   tem <- getComment(tar,limit="all")
+  print(tem)
   chk <- nrow(tem)>1
   expect(chk, T)
 })
