@@ -3,6 +3,7 @@ context("test-getcomment.R")
 test_that("get one comment work", {
   tar <- "http://v.media.daum.net/v/20100101092104056"
   tem <- getComment(tar)
+  print(tem)
   expect_equal(nrow(tem), 1)
 })
 
