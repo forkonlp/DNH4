@@ -84,36 +84,7 @@ getComment <-
       names(user) <- paste0("user_", names(user))
       dat <- cbind(tem[, c(1, 3:15)], user)
       if (nrow(dat) != 1) {
-        dat <-
-          tidyr::unnest(
-            dat,
-            cols = c(
-              id,
-              postId,
-              forumId,
-              parentId,
-              type,
-              status,
-              flags,
-              content,
-              createdAt,
-              updatedAt,
-              childCount,
-              likeCount,
-              dislikeCount,
-              recommendCount,
-              user_id,
-              user_status,
-              user_type,
-              user_flags,
-              user_username,
-              user_roles,
-              user_providerId,
-              user_providerUserId,
-              user_displayName,
-              user_commentCount
-            )
-          )
+        dat <- tidyr::unnest(dat)
       }
     }
     if (identical(dat, list())) {
