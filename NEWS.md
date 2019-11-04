@@ -1,5 +1,11 @@
 # DNH4 0.1.5
 
+* `getComment()` 함수의 `df` 변환시 오류를 수정하였습니다.
+* `getAllComment()` 함수를 추가하였습니다.
+
+* Fix `getComment()` of error occurs when `df` transform.
+* Add `getAllComment()` function.
+
 # DNH4 0.1.4
 
 * `getComment()` 함수의 auth 부분을 수정하였습니다.
