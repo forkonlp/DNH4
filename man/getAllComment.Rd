@@ -4,12 +4,12 @@
 \alias{getAllComment}
 \title{Get All Comment}
 \usage{
-getAllComment(turl, ...)
+getAllComment(turl, sort = c("RECOMMEND", "LATEST"))
 }
 \arguments{
 \item{turl}{like 'http://v.media.daum.net/v/20161117210603961'.}
 
-\item{...}{All params from getComment.}
+\item{sort}{you can select RECOMMEND, LATEST. RECOMMEND is Default.}
 }
 \value{
 Get data.frame.

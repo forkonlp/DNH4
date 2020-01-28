@@ -11,15 +11,15 @@ Description: Provides some utils to get korean text sample from news articles
 License: MIT + file LICENSE
 URL: http://github.com/forkonlp/D2H4
 BugReports: http://github.com/forkonlp/D2H4/issues
-RoxygenNote: 6.1.1
+RoxygenNote: 7.0.2
 language: r(>=3.3.0)
 Encoding: UTF-8
 cache: packages
 LazyData: true
 Imports:
-  httr, 
-  xml2,
-  rvest,
-  tidyr
+    httr,
+    xml2,
+    rvest,
+    tidyr
 Suggests: 
   testthat

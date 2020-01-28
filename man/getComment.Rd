@@ -4,19 +4,27 @@
 \alias{getComment}
 \title{Get Comment}
 \usage{
-getComment(turl, limit = 10, parentId = 0, sort = c("RECOMMEND",
-  "LATEST"), type = c("df", "list"))
+getComment(
+  turl,
+  limit = 10,
+  offset = 0,
+  parentId = 0,
+  sort = c("RECOMMEND", "LATEST"),
+  type = c("df", "list")
+)
 }
 \arguments{
 \item{turl}{like 'http://v.media.daum.net/v/20161117210603961'.}
 
-\item{limit}{is number of comment. defult is 10.}
+\item{limit}{is number of comment. Default is 10.}
 
-\item{parentId}{defult is 0.}
+\item{offset}{is comment number of start. Default is 0.}
 
-\item{sort}{you can select RECOMMEND, LATEST. RECOMMEND is defult.}
+\item{parentId}{Default is 0.}
 
-\item{type}{return type. Defult is data.frame. It may sometimes warnning message.}
+\item{sort}{you can select RECOMMEND, LATEST. RECOMMEND is Default.}
+
+\item{type}{return type. Default is data.frame. It may sometimes warn message.}
 }
 \value{
 Get data.frame.
