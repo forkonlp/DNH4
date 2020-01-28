@@ -1,7 +1,7 @@
 Package: DNH4
 Type: Package
 Title: Crawling for daum news text
-Version: 0.1.5
+Version: 0.1.6
 Date: 2018-05-29
 Authors@R: c(
     person("ChanYub", "Park", , "mrchypark@gmail.com", c("aut", "cre"))
@@ -11,15 +11,15 @@ Description: Provides some utils to get korean text sample from news articles
 License: MIT + file LICENSE
 URL: http://github.com/forkonlp/D2H4
 BugReports: http://github.com/forkonlp/D2H4/issues
-RoxygenNote: 6.1.1
+RoxygenNote: 7.0.2
 language: r(>=3.3.0)
 Encoding: UTF-8
 cache: packages
 LazyData: true
 Imports:
-  httr, 
-  xml2,
-  rvest,
-  tidyr
+    httr,
+    xml2,
+    rvest,
+    tidyr
 Suggests: 
   testthat
