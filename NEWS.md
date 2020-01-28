@@ -1,5 +1,9 @@
 # DNH4 0.1.6
 
+* `getAllComment()` 함수의 limit 100 이상 동작시 오류를 수정하였습니다.
+
+* Fix `getAllComment()` of error occurs when request over limit 100.
+
 # DNH4 0.1.5
 
 * `getComment()` 함수의 `df` 변환시 오류를 수정하였습니다.
