@@ -51,17 +51,6 @@ getAllComment <-
     max_offset <-
       round(comment_info$commentCount - comment_info$childCount,-2)/100 + 1
     
-    alls <- list()
-    for(i in 1:(max_offset)+1) {
-      alls[[i]] <- getCommentData(comment_info,
-                     100,
-                     (i-1)*100,
-                     0,
-                     sort,
-                     "df")
-      
-    }
-    
     dat <- 
       lapply((0:max_offset)*100, function(x)
         getCommentData(comment_info,
