@@ -2,7 +2,7 @@ Package: DNH4
 Type: Package
 Title: Crawling for daum news text
 Version: 0.1.7
-Date: 2018-05-29
+Date: 2020-11-23
 Authors@R: c(
     person("ChanYub", "Park", , "mrchypark@gmail.com", c("aut", "cre"))
     )
