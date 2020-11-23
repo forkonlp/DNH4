@@ -79,7 +79,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">DNH4</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.6</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.5</span>
       </span>
     </div>
 
@@ -127,14 +127,8 @@
     <p>Get daum news comments</p>
     </div>
 
-    <pre class="usage"><span class='fu'>getComment</span>(
-  <span class='no'>turl</span>,
-  <span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>10</span>,
-  <span class='kw'>offset</span> <span class='kw'>=</span> <span class='fl'>0</span>,
-  <span class='kw'>parentId</span> <span class='kw'>=</span> <span class='fl'>0</span>,
-  <span class='kw'>sort</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"RECOMMEND"</span>, <span class='st'>"LATEST"</span>),
-  <span class='kw'>type</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"df"</span>, <span class='st'>"list"</span>)
-)</pre>
+    <pre class="usage"><span class='fu'>getComment</span>(<span class='no'>turl</span>, <span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>10</span>, <span class='kw'>parentId</span> <span class='kw'>=</span> <span class='fl'>0</span>, <span class='kw'>sort</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"RECOMMEND"</span>,
+  <span class='st'>"LATEST"</span>), <span class='kw'>type</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"df"</span>, <span class='st'>"list"</span>))</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -145,23 +139,19 @@
     </tr>
     <tr>
       <th>limit</th>
-      <td><p>is number of comment. Default is 10.</p></td>
-    </tr>
-    <tr>
-      <th>offset</th>
-      <td><p>is comment number of start. Default is 0.</p></td>
+      <td><p>is number of comment. defult is 10.</p></td>
     </tr>
     <tr>
       <th>parentId</th>
-      <td><p>Default is 0.</p></td>
+      <td><p>defult is 0.</p></td>
     </tr>
     <tr>
       <th>sort</th>
-      <td><p>you can select RECOMMEND, LATEST. RECOMMEND is Default.</p></td>
+      <td><p>you can select RECOMMEND, LATEST. RECOMMEND is defult.</p></td>
     </tr>
     <tr>
       <th>type</th>
-      <td><p>return type. Default is data.frame. It may sometimes warn message.</p></td>
+      <td><p>return type. Defult is data.frame. It may sometimes warnning message.</p></td>
     </tr>
     </table>
 
