@@ -36,6 +36,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="https://github.com/jky4098"><img src="https://avatars3.githubusercontent.com/u/53418482?v=4" width="100px;" alt=""/><br /><sub><b>jky4098</b></sub></a><br /><a href="https://github.com/forkonlp/DNH4/issues?q=author%3Ajky4098" title="Bug reports">🐛</a></td>
     <td align="center"><a href="https://github.com/lenaleno"><img src="https://avatars1.githubusercontent.com/u/60345961?v=4" width="100px;" alt=""/><br /><sub><b>lenaleno</b></sub></a><br /><a href="https://github.com/forkonlp/DNH4/issues?q=author%3Alenaleno" title="Bug reports">🐛</a></td>
+    <td align="center"><a href="https://github.com/symbori"><img src="https://avatars2.githubusercontent.com/u/64598409?v=4" width="100px;" alt=""/><br /><sub><b>symbori</b></sub></a><br /><a href="https://github.com/forkonlp/DNH4/issues?q=author%3Asymbori" title="Bug reports">🐛</a></td>
   </tr>
 </table>
 
