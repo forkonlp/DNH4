@@ -24,10 +24,10 @@ getComment(
 
 \item{sort}{you can select RECOMMEND, LATEST. RECOMMEND is Default.}
 
-\item{type}{return type. Default is data.frame. It may sometimes warn message.}
+\item{type}{return type. Default is tibble. It may sometimes warn message.}
 }
 \value{
-Get data.frame.
+a [tibble][tibble::tibble-package]
 }
 \description{
 Get daum news comments

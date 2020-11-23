@@ -10,7 +10,7 @@ getUrlListByCategory(turl = url)
 \item{turl}{is target url daum news.}
 }
 \value{
-Get data.frame(news_title, news_links).
+a [tibble][tibble::tibble-package](news_title, news_links).
 }
 \description{
 Get daum news titles and links from target url.

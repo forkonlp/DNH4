@@ -3,12 +3,11 @@
 #' Get daum news content from links.
 #'
 #' @param turl is daum news link.
-#' @return Get data.frame(url,datetime,press,title,content).
+#' @return a [tibble][tibble::tibble-package] (url,datetime,press,title,content).
 #' @export
 #' @importFrom xml2 read_html
 #' @importFrom rvest html_nodes html_text html_attr
 #' @importFrom httr GET content user_agent
-
 getContent <- function(turl = url) {
   if (!identical(url, character(0))) {
     tem <-

@@ -23,9 +23,11 @@ test_that("get many comment work", {
 })
 
 test_that("get all comment work", {
-  tar <- "http://v.media.daum.net/v/20180516162315753"
-  tem <- getAllComment(tar)
-  print(tem)
-  chk <- nrow(tem)>100
-  expect(chk, T)
+  for (i in 1:10) {
+    tar <- "http://v.media.daum.net/v/20200522093902880"
+    tem <- getAllComment(tar)
+    print(tem)
+    chk <- nrow(tem)>4000
+    expect(chk, T) 
+  }
 })

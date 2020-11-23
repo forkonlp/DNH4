@@ -12,7 +12,7 @@ getAllComment(turl, sort = c("RECOMMEND", "LATEST"))
 \item{sort}{you can select RECOMMEND, LATEST. RECOMMEND is Default.}
 }
 \value{
-Get data.frame.
+a [tibble][tibble::tibble-package]
 }
 \description{
 Get daum news comments

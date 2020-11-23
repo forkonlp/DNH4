@@ -10,7 +10,7 @@ getContent(turl = url)
 \item{turl}{is daum news link.}
 }
 \value{
-Get data.frame(url,datetime,press,title,content).
+a [tibble][tibble::tibble-package] (url,datetime,press,title,content).
 }
 \description{
 Get daum news content from links.

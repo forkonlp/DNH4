@@ -7,8 +7,8 @@
 #' @param offset is comment number of start. Default is 0.
 #' @param parentId Default is 0.
 #' @param sort you can select RECOMMEND, LATEST. RECOMMEND is Default.
-#' @param type return type. Default is data.frame. It may sometimes warn message.
-#' @return Get data.frame.
+#' @param type return type. Default is tibble. It may sometimes warn message.
+#' @return a [tibble][tibble::tibble-package]
 #' @export
 #' @importFrom httr GET content add_headers
 #' @importFrom xml2 read_html
@@ -22,7 +22,6 @@ getComment <-
            parentId = 0,
            sort = c("RECOMMEND", "LATEST"),
            type = c("df", "list")) {
-    
     auth <- getCommentAuth(turl)
     
     comment_info <- getCommentInfo(turl, auth)
@@ -42,23 +41,24 @@ getComment <-
 #'
 #' @param turl like 'http://v.media.daum.net/v/20161117210603961'.
 #' @param sort you can select RECOMMEND, LATEST. RECOMMEND is Default.
-#' @return Get data.frame.
+#' @return a [tibble][tibble::tibble-package]
 #' @export
 getAllComment <-
   function(turl, sort = c("RECOMMEND", "LATEST")) {
     auth <- getCommentAuth(turl)
     comment_info <- getCommentInfo(turl, auth)
     max_offset <-
-      round(comment_info$commentCount - comment_info$childCount,-2)/100 + 1
+      round(comment_info$commentCount - comment_info$childCount, -2) / 100 + 1
     
-    dat <- 
-      lapply((0:max_offset)*100, function(x)
+    dat <-
+      lapply((0:max_offset) * 100, function(x)
         getCommentData(comment_info,
-                          100,
-                          x,
-                          0,
-                          sort,
-                          "df"))
+                       100,
+                       x,
+                       0,
+                       sort,
+                       "df"))
+  
     dat <- do.call(rbind, dat)
     return(dat)
   }
@@ -66,7 +66,6 @@ getAllComment <-
 
 
 getCommentAuth <- function(turl) {
-
   client_id <- httr::GET(turl)
   client_id <- httr::content(client_id)
   client_id <- rvest::html_nodes(client_id, ".alex-area")
@@ -102,7 +101,7 @@ getCommentData <- function(comment_info,
                            offset,
                            parentId,
                            sort,
-                           type){
+                           type) {
   tar <-
     paste0(
       "http://comment.daum.net/apis/v1/posts/",
@@ -128,7 +127,7 @@ getCommentData <- function(comment_info,
   return(dat)
 }
 
-CommentListtoDf <- function(dat){
+CommentListtoDf <- function(dat) {
   chk <- unlist(lapply(dat, function(x) x$icon))
   if (!is.null(chk)) {
     dat <- lapply(dat, function(x) {
@@ -139,6 +138,9 @@ CommentListtoDf <- function(dat){
   tem <- do.call(rbind, dat)
   user <-
     lapply(tem[, "user"], function(x) {
+      if(length(x) == 0) {
+        x <- emptyUser()
+      }
       x[c("url", "icon", "description")] <- NULL
       x
     })
@@ -148,7 +150,25 @@ CommentListtoDf <- function(dat){
   names(user) <- paste0("user_", names(user))
   dat <- cbind(tem[, c(1, 3:15)], user)
   if (nrow(dat) != 1) {
-    dat <- tidyr::unnest_legacy(dat)
+    dat <- tidyr::unnest(dat, cols = colnames(dat))
   }
   return(dat)
+}
+
+emptyUser <- function() {
+  list(
+    id = c(),
+    status = c(),
+    type = c(),
+    flags = c(),
+    icon = c(),
+    url = c(),
+    username = c(),
+    roles = c(),
+    providerId = c(),
+    providerUserId = c(),
+    displayName = c(),
+    description = c(),
+    commentCount = c()
+  )
 }
