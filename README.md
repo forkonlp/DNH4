@@ -15,7 +15,8 @@
 ###### [위키](https://github.com/forkonlp/DNH4/wiki/)에 한글 설명이 준비중입니다.    
 
 ```
-source("https://install-github.me/forkonlp/DNH4")
+install.packages("remotes")
+remotes::install_github("forkonlp/DNH4")
 library(DNH4)
 ```
 
