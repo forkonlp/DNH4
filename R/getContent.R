@@ -22,10 +22,10 @@ getContent <- function(turl = url) {
         Encoding(title) <- "UTF-8"
         
         hobj_nodes <-
-          rvest::html_nodes(hobj, "span.info_view span.txt_info")
+          rvest::html_nodes(hobj, "span.info_view span.txt_info span.num_date")
         datetime <- rvest::html_text(hobj_nodes)
         Encoding(datetime) <- "UTF-8"
-        datetime <- gsub("[^0-9.: ]","",datetime)
+        datetime <- gsub("[^0-9.:]","",datetime)
         datetime <- trimws(datetime)
         datetime <- datetime[nchar(datetime)>0]
         datetime <-
@@ -48,7 +48,7 @@ getContent <- function(turl = url) {
         Encoding(press) <- "UTF-8"
         
         hobj_nodes <-
-          rvest::html_nodes(hobj, "div.article_view section p")
+          rvest::html_nodes(hobj, 'div.article_view section p,div[dmcf-ptype="general"]')
         content <- rvest::html_text(hobj_nodes)
         Encoding(content) <- "UTF-8"
         content <- trimws(content)
