@@ -73,7 +73,7 @@ getCommentAuth <- function(turl) {
   
   tar <-
     paste0(
-      "https://comment.daum.net/oauth/token?grant_type=alex_credentials&client_id=",
+      "https://alex.daum.net/oauth/token?grant_type=alex_credentials&client_id=",
       client_id
     )
   
@@ -88,12 +88,12 @@ getCommentInfo <- function(turl, auth) {
   post_id <- post_id[length(post_id)]
   
   tar <-
-    paste0("http://comment.daum.net/apis/v1/posts/@", post_id)
+    paste0("https://comment.daum.net/apis/v1/ui/single/main/@", post_id)
   ad <-
     httr::add_headers("Authorization" = paste0("Bearer ", auth$access_token))
   comment_info <- httr::GET(tar, ad)
   comment_info <- httr::content(comment_info, encoding = "UTF-8")
-  return(comment_info)
+  return(comment_info$post)
 }
 
 getCommentData <- function(comment_info,
