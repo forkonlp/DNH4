@@ -1,7 +1,7 @@
 Package: DNH4
 Type: Package
 Title: Crawling for daum news text
-Version: 0.1.7
+Version: 0.1.8
 Date: 2020-11-23
 Authors@R: person(given = "Chanyub",
              family = "Park",
