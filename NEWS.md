@@ -1,3 +1,9 @@
+# DNH4 0.1.10
+
+* Cran 등록을 위한 수정 버전입니다.
+
+* Tiny change for cran submit
+
 # DNH4 0.1.8
 
 * 다음 뉴스의 댓글 구조가 바뀌어서 `getComment` 함수를 대응 개발 하였습니다. 
