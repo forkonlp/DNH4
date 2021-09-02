@@ -4,16 +4,16 @@
 \name{DNH4-package}
 \alias{DNH4}
 \alias{DNH4-package}
-\title{DNH4: Crawling for daum news text}
+\title{DNH4: Crawling for Daum News Text}
 \description{
-Provides some utils to get korean text sample from news articles
-            in daum which is popular news portal servise in korea.
+Provides some utils to get Korean text sample from news articles
+            in Daum which is popular news portal service in Korea.
 }
 \seealso{
 Useful links:
 \itemize{
-  \item \url{http://github.com/forkonlp/D2H4}
-  \item Report bugs at \url{http://github.com/forkonlp/D2H4/issues}
+  \item \url{https://github.com/forkonlp/DNH4}
+  \item Report bugs at \url{https://github.com/forkonlp/DNH4/issues}
 }
 
 }

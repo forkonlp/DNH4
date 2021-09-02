@@ -1,6 +1,6 @@
 # DNH4
 [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
-[![lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
+[![lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 [![Travis build status](https://travis-ci.org/forkonlp/DNH4.svg?branch=master)](https://travis-ci.org/forkonlp/DNH4)
 [![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/forkonlp/DNH4?branch=master&svg=true)](https://ci.appveyor.com/project/forkonlp/DNH4)
 [![Coverage Status](https://coveralls.io/repos/github/forkonlp/D2H4/badge.svg?branch=master)](https://coveralls.io/github/forkonlp/D2H4?branch=master)
@@ -23,8 +23,7 @@ library(DNH4)
 MIT License.<br>
 Please [let me know](mailto:forkonlp@gmail.com) use this package.
 
-Please note that this project is released with a [Contributor Code of Conduct](CODE_OF_CONDUCT.md).
-By participating in this project you agree to abide by its terms.
+zPlease note that the DNH4 project is released with a [Contributor Code of Conduct](https://forkonlp.github.io/DNH4/CODE_OF_CONDUCT.html). By contributing to this project, you agree to abide by its terms.
 
 ## Contributors ✨
 
