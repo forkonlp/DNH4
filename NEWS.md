@@ -1,5 +1,9 @@
 # DNH4 0.1.11
 
+* Cran 정책에 맞게 license 파일을 수정했습니다.
+
+* Fix LICENSE file.
+
 # DNH4 0.1.10
 
 * Cran 등록을 위한 수정 버전입니다.

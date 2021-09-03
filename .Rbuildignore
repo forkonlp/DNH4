@@ -7,3 +7,4 @@
 ^docs$
 ^.github*
 ^.all-contributorsrc$
+^LICENSE\.md$
