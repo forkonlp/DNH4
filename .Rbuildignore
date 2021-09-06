@@ -8,3 +8,5 @@
 ^.github*
 ^.all-contributorsrc$
 ^LICENSE\.md$
+^pkgdown$
+^\.github$

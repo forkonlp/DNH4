@@ -1,19 +1,16 @@
 # DNH4 0.1.11
 
 * Cran 정책에 맞게 license 파일을 수정했습니다.
-
 * Fix LICENSE file.
 
 # DNH4 0.1.10
 
 * Cran 등록을 위한 수정 버전입니다.
-
 * Tiny change for cran submit
 
 # DNH4 0.1.8
 
 * 다음 뉴스의 댓글 구조가 바뀌어서 `getComment` 함수를 대응 개발 하였습니다. 
-
 * Fix `getComment` function to change site.
 
 # DNH4 0.1.7
@@ -21,7 +18,6 @@
 # DNH4 0.1.6
 
 * `getAllComment()` 함수의 limit 100 이상 동작시 오류를 수정하였습니다.
-
 * Fix `getAllComment()` of error occurs when request over limit 100.
 
 # DNH4 0.1.5
