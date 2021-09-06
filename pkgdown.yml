@@ -1,8 +1,9 @@
-pandoc: 2.3.1
-pkgdown: 1.4.1
+pandoc: 2.7.3
+pkgdown: 1.6.1
 pkgdown_sha: ~
-articles: []
+articles: {}
+last_built: 2021-09-06T12:56Z
 urls:
-  reference: http://forkonlp.github.io/DNH4/reference
-  article: http://forkonlp.github.io/DNH4/articles
+  reference: https://forkonlp.github.io/DNH4/reference
+  article: https://forkonlp.github.io/DNH4/articles
 
