@@ -9,7 +9,9 @@
 #' @return Get data.frame(chr:sub_cate_name, chr:url).
 #' @export
 #' @importFrom rvest read_html html_nodes html_text html_attr
-
+#' @examples
+#'   getSubCategory()
+#'   getSubCategory("politics")
 getSubCategory <- function(categoryUrl = "society", fresh = FALSE) {
   if (!fresh) {
     category_sub <-
@@ -31,5 +33,4 @@ getSubCategory <- function(categoryUrl = "society", fresh = FALSE) {
     )
   urls <- urls[-1, ]
   return(urls)
-  
 }

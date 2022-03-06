@@ -2,7 +2,7 @@
 
 <!-- badges: start -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg)](#contributors)
-[![lifecycle](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing) 
+[![lifecycle](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://lifecycle.r-lib.org/articles/stages.html#maturing) 
 [![License](https://img.shields.io/github/license/mashape/apistatus.svg)](https://opensource.org/licenses/mit-license.php) 
 [![Coverage status](https://codecov.io/gh/forkonlp/DNH4/branch/master/graph/badge.svg)](https://codecov.io/github/forkonlp/DNH4?branch=main) 
 [![](https://cranlogs.r-pkg.org/badges/DNH4)](https://cran.r-project.org/package=DNH4)
@@ -46,7 +46,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tr>
     <td align="center"><a href="https://github.com/jky4098"><img src="https://avatars3.githubusercontent.com/u/53418482?v=4" width="100px;" alt=""/><br /><sub><b>jky4098</b></sub></a><br /><a href="https://github.com/forkonlp/DNH4/issues?q=author%3Ajky4098" title="Bug reports">🐛</a></td>
-    <td align="center"><a href="https://github.com/lenaleno"><img src="https://avatars1.githubusercontent.com/u/60345961?v=4" width="100px;" alt=""/><br /><sub><b>lenaleno</b></sub></a><br /><a href="https://github.com/forkonlp/DNH4/issues?q=author%3Alenaleno" title="Bug reports">🐛</a></td>
+    <td align="center"><a href="https://github.com/renasung"><img src="https://avatars1.githubusercontent.com/u/60345961?v=4" width="100px;" alt=""/><br /><sub><b>renasung</b></sub></a><br /><a href="https://github.com/forkonlp/DNH4/issues?q=author%3Arenasung" title="Bug reports">🐛</a></td>
     <td align="center"><a href="https://github.com/symbori"><img src="https://avatars2.githubusercontent.com/u/64598409?v=4" width="100px;" alt=""/><br /><sub><b>symbori</b></sub></a><br /><a href="https://github.com/forkonlp/DNH4/issues?q=author%3Asymbori" title="Bug reports">🐛</a></td>
   </tr>
 </table>

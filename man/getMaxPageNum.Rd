@@ -8,7 +8,7 @@ getMaxPageNum(turl = url)
 }
 \arguments{
 \item{turl}{is target url include breakingnews, category url, date without regDate like below.
-'http://media.daum.net/breakingnews/politics/president?regDate=20161104'}
+'https://news.daum.net/breakingnews/politics/administration?regDate=20220305'}
 }
 \value{
 Get numeric

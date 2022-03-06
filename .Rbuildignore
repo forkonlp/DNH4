@@ -11,3 +11,4 @@
 ^pkgdown$
 ^\.github$
 ^data-raw$
+^cran-comments\.md$

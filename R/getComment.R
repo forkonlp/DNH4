@@ -61,7 +61,8 @@ getAllComment <-
   }
 
 
-
+#' @importFrom httr GET content add_headers
+#' @importFrom rvest html_nodes html_attr
 getCommentAuth <- function(turl) {
   client_id <- httr::GET(turl)
   client_id <- httr::content(client_id)
@@ -80,6 +81,7 @@ getCommentAuth <- function(turl) {
   return(auth)
 }
 
+#' @importFrom httr add_headers GET content
 getCommentInfo <- function(turl, auth) {
   post_id <- strsplit(turl, "/")[[1]]
   post_id <- post_id[length(post_id)]
@@ -93,6 +95,7 @@ getCommentInfo <- function(turl, auth) {
   return(comment_info$post)
 }
 
+#' @importFrom httr GET content
 getCommentData <- function(comment_info,
                            limit,
                            offset,
@@ -124,6 +127,7 @@ getCommentData <- function(comment_info,
   return(dat)
 }
 
+#' @importFrom tidyr unnest
 CommentListtoDf <- function(dat) {
   chk <- unlist(lapply(dat, function(x) x$icon))
   if (!is.null(chk)) {

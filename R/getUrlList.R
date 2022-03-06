@@ -6,6 +6,7 @@
 #' @return a [tibble][tibble::tibble-package](news_title, news_links).
 #' @export
 #' @importFrom rvest read_html html_nodes html_text html_attr
+#' @importFrom tibble tibble
 getUrlList <- function(turl = url) {
   hobj <- rvest::read_html(turl)
   hobj_nodes <- rvest::html_nodes(hobj, "strong.tit_thumb a")
@@ -16,8 +17,7 @@ getUrlList <- function(turl = url) {
   news_lists <-
     tibble::tibble(
       news_title = news_title,
-      news_links = news_links,
-      stringsAsFactors = F
+      news_links = news_links
     )
   
   return(news_lists)
