@@ -1,0 +1,37 @@
+[
+    {
+        "id": 250088736,
+        "userId": 2445694,
+        "postId": -99986644747,
+        "forumId": -99,
+        "parentId": 0,
+        "type": "COMMENT",
+        "status": "S",
+        "flags": 0,
+        "rating": 0,
+        "content": "놀랍게도 테스트입니다.",
+        "createdAt": "2018-05-14T01:08:05+0900",
+        "updatedAt": "2018-05-14T01:08:05+0900",
+        "childCount": 0,
+        "likeCount": 0,
+        "dislikeCount": 0,
+        "recommendCount": 0,
+        "screenedByKeeper": false,
+        "user": {
+            "id": 2445694,
+            "status": "S",
+            "icon": "https://t1.daumcdn.net/profile/LAkov_YKS1s0",
+            "providerId": "DAUM",
+            "displayName": "우수라",
+            "commentCount": 1,
+            "providerUserId": "",
+            "username": "",
+            "flags": 0,
+            "roles": "",
+            "url": "",
+            "title": "",
+            "description": "",
+            "type": ""
+        }
+    }
+]
