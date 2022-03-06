@@ -1,5 +1,8 @@
 # DNH4 0.1.12
 
+* 카테고리 리턴 함수에 cache를 추가하였습니다.
+* Add cache on categories function.
+
 # DNH4 0.1.11
 
 * Cran 정책에 맞게 license 파일을 수정했습니다.

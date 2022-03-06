@@ -4,10 +4,14 @@
 \alias{getSubCategory}
 \title{Get News Sub Categories}
 \usage{
-getSubCategory(categoryUrl = "society")
+getSubCategory(categoryUrl = "society", fresh = FALSE)
 }
 \arguments{
-\item{categoryUrl}{Main category url in daum news. Only 1 value is passible. Default is society.}
+\item{categoryUrl}{Main category url in daum news. Only 1 value is passible. 
+Default is society.}
+
+\item{fresh}{If TRUE, get data from internet. 
+Default is FALSE which is return with cache.}
 }
 \value{
 Get data.frame(chr:sub_cate_name, chr:url).

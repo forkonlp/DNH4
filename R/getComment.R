@@ -10,11 +10,6 @@
 #' @param type return type. Default is tibble. It may sometimes warn message.
 #' @return a [tibble][tibble::tibble-package]
 #' @export
-#' @importFrom httr GET content add_headers
-#' @importFrom xml2 read_html
-#' @importFrom rvest html_nodes html_attr
-#' @importFrom tidyr unnest
-
 getComment <-
   function(turl,
            limit = 10,
@@ -42,6 +37,8 @@ getComment <-
 #' @param turl like 'http://v.media.daum.net/v/20161117210603961'.
 #' @param sort you can select RECOMMEND, LATEST. RECOMMEND is Default.
 #' @return a [tibble][tibble::tibble-package]
+#' @importFrom httr GET content add_headers
+#' @importFrom rvest html_nodes html_attr
 #' @export
 getAllComment <-
   function(turl, sort = c("RECOMMEND", "LATEST")) {
@@ -138,7 +135,7 @@ CommentListtoDf <- function(dat) {
   tem <- do.call(rbind, dat)
   user <-
     lapply(tem[, "user"], function(x) {
-      if(length(x) == 0) {
+      if (length(x) == 0) {
         x <- emptyUser()
       }
       x[c("url", "icon", "description")] <- NULL

@@ -4,10 +4,9 @@
 #'
 #' @param turl is daum news link.
 #' @return a [tibble][tibble::tibble-package] (url,datetime,press,title,content).
-#' @export
-#' @importFrom xml2 read_html
-#' @importFrom rvest html_nodes html_text html_attr
+#' @importFrom rvest read_html html_nodes html_text html_attr
 #' @importFrom httr GET content user_agent
+#' @export
 getContent <- function(turl = url) {
   if (!identical(url, character(0))) {
     tem <-
@@ -15,7 +14,7 @@ getContent <- function(turl = url) {
                 httr::user_agent("DNH4 by chanyub.park <mrchypark@gmail.com>"))
     if (tem$status_code == 200) {
       if (grepl("^https://news.v.daum.net/v", tem$url)) {
-        hobj <- xml2::read_html(tem)
+        hobj <- rvest::read_html(tem)
         hobj_nodes <-
           rvest::html_nodes(hobj, "div.head_view h3.tit_view")
         title <- rvest::html_text(hobj_nodes)
@@ -27,7 +26,7 @@ getContent <- function(turl = url) {
         Encoding(datetime) <- "UTF-8"
         datetime <- gsub("[^0-9.:]","",datetime)
         datetime <- trimws(datetime)
-        datetime <- datetime[nchar(datetime)>0]
+        datetime <- datetime[nchar(datetime) > 0]
         datetime <-
           gsub("([0-9]{4})\\.([0-9]{2})\\.([0-9]{2})\\.",
                "\\1-\\2-\\3",

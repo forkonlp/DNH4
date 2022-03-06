@@ -4,11 +4,10 @@
 #'             'http://media.daum.net/breakingnews/politics/president?regDate=20161104'
 #' @return Get numeric
 #' @export
-#' @importFrom xml2 read_html
-#' @importFrom rvest html_node html_attr
+#' @importFrom rvest read_html html_node html_attr
 
 getMaxPageNum <- function(turl = url) {
-  hobj <- xml2::read_html(turl)
+  hobj <- rvest::read_html(turl)
   ifnext <- rvest::html_node(hobj, "span.inner_paging a.btn_next")
   while (class(ifnext) == "xml_node") {
     nextUrl <- html_attr(ifnext, "href")
