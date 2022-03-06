@@ -1,11 +1,14 @@
 # DNH4
 
 <!-- badges: start -->
-[![CRAN status](https://www.r-pkg.org/badges/version/DNH4)](https://CRAN.R-project.org/package=DNH4)
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
-[![lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
-[![Coverage Status](https://coveralls.io/repos/github/forkonlp/D2H4/badge.svg?branch=master)](https://coveralls.io/github/forkonlp/D2H4?branch=master)
-[![License](https://img.shields.io/github/license/mashape/apistatus.svg)](https://opensource.org/licenses/mit-license.php)
+[![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg)](#contributors)
+[![lifecycle](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing) 
+[![License](https://img.shields.io/github/license/mashape/apistatus.svg)](https://opensource.org/licenses/mit-license.php) 
+[![Coverage status](https://codecov.io/gh/forkonlp/DNH4/branch/master/graph/badge.svg)](https://codecov.io/github/forkonlp/DNH4?branch=main) 
+[![](https://cranlogs.r-pkg.org/badges/DNH4)](https://cran.r-project.org/package=DNH4)
+[![runiverse-name](https://forkonlp.r-universe.dev/badges/:name)](https://forkonlp.r-universe.dev/)
+[![runiverse-package](https://forkonlp.r-universe.dev/badges/DNH4)](https://forkonlp.r-universe.dev/ui#packages)
+[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/DNH4)](https://cran.r-project.org/package=DNH4)
 [![R-CMD-check](https://github.com/forkonlp/DNH4/workflows/R-CMD-check/badge.svg)](https://github.com/forkonlp/DNH4/actions)
 <!-- badges: end -->
 
@@ -19,16 +22,13 @@
 
 ## install
 
-cran version 
 ```
+# CRAN version
 install.packages("DNH4")
-```
 
-develop version
-```
-install.packages("remotes")
-remotes::install_github("forkonlp/DNH4")
-library(DNH4)
+
+# Dev version
+install.packages("DNH4", repos = "https://forkonlp.r-universe.dev")
 ```
 
 MIT License.<br>

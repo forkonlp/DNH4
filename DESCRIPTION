@@ -13,7 +13,7 @@ Description: Provides some utils to get Korean text sample from news articles
             in Daum which is popular news portal service in Korea.
 URL: https://forkonlp.github.io/DNH4, https://github.com/forkonlp/DNH4
 BugReports: https://github.com/forkonlp/DNH4/issues
-RoxygenNote: 7.1.1
+RoxygenNote: 7.1.2
 Language: r(>=3.3.0)
 Encoding: UTF-8
 LazyData: true

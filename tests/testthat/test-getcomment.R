@@ -18,7 +18,7 @@ test_that("get many comment work", {
   tar <- "http://v.media.daum.net/v/20180516162315753"
   tem <- getComment(tar)
   print(tem)
-  chk <- nrow(tem)>1
+  chk <- nrow(tem) > 1
   expect(chk, T)
 })
 
@@ -27,7 +27,7 @@ test_that("get all comment work", {
     tar <- "http://v.media.daum.net/v/20200522093902880"
     tem <- getAllComment(tar)
     print(tem)
-    chk <- nrow(tem)>4000
+    chk <- nrow(tem) > 4000
     expect(chk, T) 
   }
 })
