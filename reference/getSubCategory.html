@@ -23,7 +23,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">DNH4</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.1.11</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.1.12</span>
       </span>
     </div>
 
@@ -59,13 +59,17 @@
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">getSubCategory</span><span class="op">(</span>categoryUrl <span class="op">=</span> <span class="st">"society"</span><span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">getSubCategory</span><span class="op">(</span>categoryUrl <span class="op">=</span> <span class="st">"society"</span>, fresh <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></code></pre></div>
     </div>
 
     <div id="arguments">
     <h2>Arguments</h2>
     <dl><dt>categoryUrl</dt>
-<dd><p>Main category url in daum news. Only 1 value is passible. Default is society.</p></dd>
+<dd><p>Main category url in daum news. Only 1 value is passible. 
+Default is society.</p></dd>
+<dt>fresh</dt>
+<dd><p>If TRUE, get data from internet. 
+Default is FALSE which is return with cache.</p></dd>
 </dl></div>
     <div id="value">
     <h2>Value</h2>
