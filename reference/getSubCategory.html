@@ -76,6 +76,38 @@ Default is FALSE which is return with cache.</p></dd>
     <p>Get data.frame(chr:sub_cate_name, chr:url).</p>
     </div>
 
+    <div id="ref-examples">
+    <h2>Examples</h2>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in">  <span class="fu">getSubCategory</span><span class="op">(</span><span class="op">)</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    sub_cate_name                                      url</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2      사건/사고             /breakingnews/society/affair</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3           인물             /breakingnews/society/people</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4           교육          /breakingnews/society/education</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5         미디어              /breakingnews/society/media</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6           여성              /breakingnews/society/woman</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 7           복지            /breakingnews/society/welfare</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 8       사회일반             /breakingnews/society/others</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9           노동              /breakingnews/society/labor</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 10          환경        /breakingnews/society/environment</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 11          전국             /breakingnews/society/nation</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 12          서울       /breakingnews/society/nation/seoul</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 13        수도권       /breakingnews/society/nation/metro</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14          강원     /breakingnews/society/nation/gangwon</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15          충청 /breakingnews/society/nation/chungcheong</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 16          경상  /breakingnews/society/nation/gyeongsang</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 17          전라      /breakingnews/society/nation/jeolla</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 18          제주        /breakingnews/society/nation/jeju</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 19      지역일반      /breakingnews/society/nation/others</span>
+<span class="r-in">  <span class="fu">getSubCategory</span><span class="op">(</span><span class="st">"politics"</span><span class="op">)</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    sub_cate_name                                   url</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 21   행정/지자체 /breakingnews/politics/administration</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 31     국회/정당       /breakingnews/politics/assembly</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 41          북한          /breakingnews/politics/north</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 51      정치일반         /breakingnews/politics/others</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 61     외교/국방       /breakingnews/politics/dipdefen</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 71        청와대      /breakingnews/politics/president</span>
+</code></pre></div>
+    </div>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top"><h2 data-toc-skip>Contents</h2>
