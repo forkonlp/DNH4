@@ -7,8 +7,8 @@ library(ggplot2)
 library(hexSticker)
 
 df <- data.frame(
-  xstart = c(-1, -0.5, 0, 0.5),
-  xend = c(-0.5, 0, 0.5, 1),
+  xstart = c(-1, -0.4, 0.08, 0.55),
+  xend = c(-0.4, 0.08, 0.55, 1),
   color = c("#7288C4", "#b0cb04", "#fbc201", "#eb6353")
 )
 
@@ -22,7 +22,7 @@ p <- ggplot(NULL, aes(x = 0, y = 0)) +
       NULL,
       xmin = xstart,
       xmax = xend,
-      fill = color
+      fill = I(color)
     ),
     ymin = 0,
     ymax = 4,
