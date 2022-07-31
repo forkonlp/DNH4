@@ -1,4 +1,4 @@
-# DNH4
+# DNH4 [<img src="man/figures/logo.png" align="right" height=140/>](https://forkonlp.github.io/DNH4/index.html)
 
 <!-- badges: start -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg)](#contributors)
