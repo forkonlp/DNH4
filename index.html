@@ -6,6 +6,12 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Crawling for Daum News Text • DNH4</title>
+<!-- favicons --><link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="apple-touch-icon.png">
+<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" type="image/png" sizes="60x60" href="apple-touch-icon-60x60.png">
 <!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script><!-- Bootstrap --><link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.4.0/yeti/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script><!-- bootstrap-toc --><link rel="stylesheet" href="bootstrap-toc.css">
 <script src="bootstrap-toc.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
@@ -14,6 +20,7 @@
 <script src="pkgdown.js"></script><meta property="og:title" content="Crawling for Daum News Text">
 <meta property="og:description" content="Provides some utils to get Korean text sample from news articles
             in Daum which is popular news portal service in Korea.">
+<meta property="og:image" content="https://forkonlp.github.io/DNH4/logo.png">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -76,46 +83,37 @@
 <div class="page-header"><h1 id="dnh4">DNH4<a class="anchor" aria-label="anchor" href="#dnh4"></a>
 </h1></div>
 <!-- badges: start -->
-
 <div class="section level2">
 <h2 id="다음-뉴스-크롤링을-위한-도구">다음 뉴스 크롤링을 위한 도구<a class="anchor" aria-label="anchor" href="#%EB%8B%A4%EC%9D%8C-%EB%89%B4%EC%8A%A4-%ED%81%AC%EB%A1%A4%EB%A7%81%EC%9D%84-%EC%9C%84%ED%95%9C-%EB%8F%84%EA%B5%AC"></a>
 </h2>
 <div class="section level4">
 <h4 id="mit-라이선스로-자유롭게-사용하셔도-좋으나-star는-제작자를-춤추게-합니다">MIT 라이선스로 자유롭게 사용하셔도 좋으나 star는 제작자를 춤추게 합니다.<a class="anchor" aria-label="anchor" href="#mit-%EB%9D%BC%EC%9D%B4%EC%84%A0%EC%8A%A4%EB%A1%9C-%EC%9E%90%EC%9C%A0%EB%A1%AD%EA%B2%8C-%EC%82%AC%EC%9A%A9%ED%95%98%EC%85%94%EB%8F%84-%EC%A2%8B%EC%9C%BC%EB%82%98-star%EB%8A%94-%EC%A0%9C%EC%9E%91%EC%9E%90%EB%A5%BC-%EC%B6%A4%EC%B6%94%EA%B2%8C-%ED%95%A9%EB%8B%88%EB%8B%A4"></a>
 </h4>
-<div class="section level6">
-<h6 id="mit-라이선스는-마음껏-쓰되-출처를-표시해달라는-뜻입니다">(MIT 라이선스는 마음껏 쓰되, 출처를 표시해달라는 뜻입니다.)<a class="anchor" aria-label="anchor" href="#mit-%EB%9D%BC%EC%9D%B4%EC%84%A0%EC%8A%A4%EB%8A%94-%EB%A7%88%EC%9D%8C%EA%BB%8F-%EC%93%B0%EB%90%98-%EC%B6%9C%EC%B2%98%EB%A5%BC-%ED%91%9C%EC%8B%9C%ED%95%B4%EB%8B%AC%EB%9D%BC%EB%8A%94-%EB%9C%BB%EC%9E%85%EB%8B%88%EB%8B%A4"></a>
-</h6>
-</div>
+<div class="section level6"><h6 id="mit-라이선스는-마음껏-쓰되-출처를-표시해달라는-뜻입니다">(MIT 라이선스는 마음껏 쓰되, 출처를 표시해달라는 뜻입니다.)<a class="anchor" aria-label="anchor" href="#mit-%EB%9D%BC%EC%9D%B4%EC%84%A0%EC%8A%A4%EB%8A%94-%EB%A7%88%EC%9D%8C%EA%BB%8F-%EC%93%B0%EB%90%98-%EC%B6%9C%EC%B2%98%EB%A5%BC-%ED%91%9C%EC%8B%9C%ED%95%B4%EB%8B%AC%EB%9D%BC%EB%8A%94-%EB%9C%BB%EC%9E%85%EB%8B%88%EB%8B%A4"></a>
+</h6></div>
 </div>
 <div class="section level4">
 <h4 id="사용하실-때-출처링크-표기-가능를-밝혀주시면-감사하겠습니다">사용하실 때 출처(링크 표기 가능)를 밝혀주시면 감사하겠습니다.<a class="anchor" aria-label="anchor" href="#%EC%82%AC%EC%9A%A9%ED%95%98%EC%8B%A4-%EB%95%8C-%EC%B6%9C%EC%B2%98%EB%A7%81%ED%81%AC-%ED%91%9C%EA%B8%B0-%EA%B0%80%EB%8A%A5%EB%A5%BC-%EB%B0%9D%ED%98%80%EC%A3%BC%EC%8B%9C%EB%A9%B4-%EA%B0%90%EC%82%AC%ED%95%98%EA%B2%A0%EC%8A%B5%EB%8B%88%EB%8B%A4"></a>
 </h4>
-<div class="section level6">
-<h6 id="문의는-forkonlpgmailcom로-주시거나-이슈로-남겨주세요">문의는 <a href="mailto:mrchypark@gmail.com">forkonlp@gmail.com</a>로 주시거나 <a href="https://github.com/forkonlp/DNH4/issues/new" class="external-link">이슈</a>로 남겨주세요.<a class="anchor" aria-label="anchor" href="#%EB%AC%B8%EC%9D%98%EB%8A%94-forkonlpgmailcom%EB%A1%9C-%EC%A3%BC%EC%8B%9C%EA%B1%B0%EB%82%98-%EC%9D%B4%EC%8A%88%EB%A1%9C-%EB%82%A8%EA%B2%A8%EC%A3%BC%EC%84%B8%EC%9A%94"></a>
-</h6>
-</div>
-<div class="section level6">
-<h6 id="이슈로-남겨주시면-같은-문제를-겪는-분이-해결하는데-도움이-됩니다">
+<div class="section level6"><h6 id="문의는-forkonlpgmailcom로-주시거나-이슈로-남겨주세요">문의는 <a href="mailto:mrchypark@gmail.com">forkonlp@gmail.com</a>로 주시거나 <a href="https://github.com/forkonlp/DNH4/issues/new" class="external-link">이슈</a>로 남겨주세요.<a class="anchor" aria-label="anchor" href="#%EB%AC%B8%EC%9D%98%EB%8A%94-forkonlpgmailcom%EB%A1%9C-%EC%A3%BC%EC%8B%9C%EA%B1%B0%EB%82%98-%EC%9D%B4%EC%8A%88%EB%A1%9C-%EB%82%A8%EA%B2%A8%EC%A3%BC%EC%84%B8%EC%9A%94"></a>
+</h6></div>
+<div class="section level6"><h6 id="이슈로-남겨주시면-같은-문제를-겪는-분이-해결하는데-도움이-됩니다">
 <a href="https://github.com/forkonlp/DNH4/issues" class="external-link">이슈</a>로 남겨주시면 같은 문제를 겪는 분이 해결하는데 도움이 됩니다.<a class="anchor" aria-label="anchor" href="#%EC%9D%B4%EC%8A%88%EB%A1%9C-%EB%82%A8%EA%B2%A8%EC%A3%BC%EC%8B%9C%EB%A9%B4-%EA%B0%99%EC%9D%80-%EB%AC%B8%EC%A0%9C%EB%A5%BC-%EA%B2%AA%EB%8A%94-%EB%B6%84%EC%9D%B4-%ED%95%B4%EA%B2%B0%ED%95%98%EB%8A%94%EB%8D%B0-%EB%8F%84%EC%9B%80%EC%9D%B4-%EB%90%A9%EB%8B%88%EB%8B%A4"></a>
-</h6>
-</div>
-<div class="section level6">
-<h6 id="위키에-한글-설명이-준비중입니다">
+</h6></div>
+<div class="section level6"><h6 id="위키에-한글-설명이-준비중입니다">
 <a href="https://github.com/forkonlp/DNH4/wiki/" class="external-link">위키</a>에 한글 설명이 준비중입니다.<a class="anchor" aria-label="anchor" href="#%EC%9C%84%ED%82%A4%EC%97%90-%ED%95%9C%EA%B8%80-%EC%84%A4%EB%AA%85%EC%9D%B4-%EC%A4%80%EB%B9%84%EC%A4%91%EC%9E%85%EB%8B%88%EB%8B%A4"></a>
-</h6>
-</div>
+</h6></div>
 </div>
 </div>
 <div class="section level2">
 <h2 id="install">install<a class="anchor" aria-label="anchor" href="#install"></a>
 </h2>
-<pre><code><span class="co"># CRAN version</span>
-<span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"DNH4"</span><span class="op">)</span>
-
-
-<span class="co"># Dev version</span>
-<span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"DNH4"</span>, repos <span class="op">=</span> <span class="st">"https://forkonlp.r-universe.dev"</span><span class="op">)</span></code></pre>
+<pre><code><span><span class="co"># CRAN version</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"DNH4"</span><span class="op">)</span></span>
+<span></span>
+<span></span>
+<span><span class="co"># Dev version</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"DNH4"</span>, repos <span class="op">=</span> <span class="st">"https://forkonlp.r-universe.dev"</span><span class="op">)</span></span></code></pre>
 <p>MIT License.<br> Please <a href="mailto:forkonlp@gmail.com">let me know</a> use this package.</p>
 <p>zPlease note that the DNH4 project is released with a <a href="https://forkonlp.github.io/DNH4/CODE_OF_CONDUCT.html">Contributor Code of Conduct</a>. By contributing to this project, you agree to abide by its terms.</p>
 </div>
@@ -123,10 +121,7 @@
 <h2 id="contributors-">Contributors ✨<a class="anchor" aria-label="anchor" href="#contributors-"></a>
 </h2>
 <p>Thanks goes to these wonderful people (<a href="https://allcontributors.org/docs/en/emoji-key" class="external-link">emoji key</a>):</p>
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<table class="table"><tr>
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section --><!-- prettier-ignore-start --><!-- markdownlint-disable --><table class="table"><tr>
 <td align="center">
 <a href="https://github.com/jky4098" class="external-link"><img src="https://avatars3.githubusercontent.com/u/53418482?v=4" width="100px;" alt=""><br><sub><b>jky4098</b></sub></a><br><a href="https://github.com/forkonlp/DNH4/issues?q=author%3Ajky4098" title="Bug reports" class="external-link">🐛</a>
 </td>
@@ -207,7 +202,7 @@
 
 <div class="pkgdown">
   <p></p>
-<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.2.</p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.6.</p>
 </div>
 
       </footer>
