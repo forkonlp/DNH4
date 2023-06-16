@@ -1,8 +1,8 @@
-pandoc: 2.14.2
-pkgdown: 2.0.6
+pandoc: 2.19.2
+pkgdown: 2.0.7
 pkgdown_sha: ~
 articles: {}
-last_built: 2022-07-31T15:51Z
+last_built: 2023-06-16T14:20Z
 urls:
   reference: https://forkonlp.github.io/dnh4/reference
   article: https://forkonlp.github.io/dnh4/articles
