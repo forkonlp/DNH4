@@ -6,6 +6,8 @@
 \alias{DNH4-package}
 \title{DNH4: Crawling for Daum News Text}
 \description{
+\if{html}{\figure{logo.png}{options: style='float: right' alt='logo' width='120'}}
+
 Provides some utils to get Korean text sample from news articles in Daum which is popular news portal service in Korea.
 }
 \seealso{
