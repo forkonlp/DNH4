@@ -14,7 +14,6 @@ Description: Provides some utils to get Korean text sample from news articles
 URL: https://forkonlp.github.io/DNH4/, https://github.com/forkonlp/DNH4/
 BugReports: https://github.com/forkonlp/DNH4/issues
 RoxygenNote: 7.2.3
-Language: r(>=3.3.0)
 Encoding: UTF-8
 LazyData: true
 Imports: 
@@ -27,4 +26,4 @@ Suggests:
   testthat
 License: MIT + file LICENSE
 Depends: 
-    R (>= 2.10)
+    R (>= 3.3.0)
