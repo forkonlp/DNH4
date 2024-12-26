@@ -1,7 +1,7 @@
 Package: DNH4
 Type: Package
 Title: Crawling for Daum News Text
-Version: 0.1.12
+Version: 0.1.13
 Date: 2022-03-06
 Authors@R: person(given = "Chanyub",
              family = "Park",
@@ -14,7 +14,6 @@ Description: Provides some utils to get Korean text sample from news articles
 URL: https://forkonlp.github.io/DNH4/, https://github.com/forkonlp/DNH4/
 BugReports: https://github.com/forkonlp/DNH4/issues
 RoxygenNote: 7.2.3
-Language: r(>=3.3.0)
 Encoding: UTF-8
 LazyData: true
 Imports: 
