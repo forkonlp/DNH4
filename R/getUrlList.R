@@ -21,12 +21,11 @@ getUrlList <- function(turl = url) {
   news_title <- all_text[news_mask]
   news_links <- all_href[news_mask]
 
-  # Clean up titles:
-  # 1. Remove trailing source and time info like "뉴스1 2분 전" or "연합뉴스 5분 전"
+  # Clean up titles
   news_title <- gsub("\\s+(조선비즈|뉴스1|연합뉴스|MBN|YTN|중앙일보|동아일보|한겨레|경향신문|서울신문|한국경제|매일경제|시사IN|주간동아|시사매거진|여성신문|서울신문|[가-힣A-Za-z]+)\\s+\\d+분? 전\\s*$", "", news_title)
-  # 2. Remove trailing patterns like "(서울=뉴스1) ..." or "(종합) (서울=뉴스1) ..." at the end
+  # Remove trailing patterns with source prefix
   news_title <- gsub("\\s*\\([가-힣A-Za-z]+=[가-힣A-Za-z]+\\)\\s*[가-힣A-Za-z]+(?:\\s+기자)?\\s*=.*$", "", news_title)
-  # 3. Remove trailing "(종합)" that might be followed by other content
+  # Remove trailing "(종합)" pattern
   news_title <- gsub("\\s*\\(종합\\)\\s*.*$", "", news_title)
   # 4. For longer texts (with article content), truncate to 150 chars
   news_title <- sapply(news_title, function(x) {
