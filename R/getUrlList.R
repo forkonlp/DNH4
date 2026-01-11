@@ -22,11 +22,10 @@ getUrlList <- function(turl = url) {
   news_links <- all_href[news_mask]
 
   # Clean up titles
-  news_title <- gsub("\\s+(조선비즈|뉴스1|연합뉴스|MBN|YTN|중앙일보|동아일보|한겨레|경향신문|서울신문|한국경제|매일경제|시사IN|주간동아|시사매거진|여성신문|서울신문|[가-힣A-Za-z]+)\\s+\\d+분? 전\\s*$", "", news_title)
+  news_title <- gsub("\\s+(\uc870\uc120\ube44\uc988|\ub274\uc2a41|\uc5f0\uac74\ub274\uc2a4|MBN|YTN|\uc911\uc559\uc77c\ubcf4|\ub3d9\uc544\uc77c\ubcf4|\ud55c\uaca8\ub808|\uacbd\ud5a5\uc2dc\ubb38|\uc11c\uc6b8\uc2dc\ubb38|\ud55c\uad6d\uacbd\uc801|\ub9e4\uc77c\uacbd\uc801|\uc2dc\uc0acIN|\uc8fc\uac04\ub3d9\uc544|\uc2dc\uc0ac\ub9e4\uac70\uc9c4|\uc5ec\uc131\uc2dc\ubb38|\uc11c\uc6b8\uc2dc\ubb38|[\uac00-\ud7a3])\\s+\\d+\ubd84? \uc804\\s*$", "", news_title)
   # Remove trailing patterns with source prefix
-  news_title <- gsub("\\s*\\([가-힣A-Za-z]+=[가-힣A-Za-z]+\\)\\s*[가-힣A-Za-z]+(?:\\s+기자)?\\s*=.*$", "", news_title)
-  # Remove trailing "(종합)" pattern
-  news_title <- gsub("\\s*\\(종합\\)\\s*.*$", "", news_title)
+  news_title <- gsub("\\s*\\([\uac00-\ud7a3]+=[\uac00-\ud7a3]+\\)\\s*[\uac00-\ud7a3]+(?:\\s+\uae30\uc790)?\\s*=.*$", "", news_title)
+  news_title <- gsub("\\s*\\(\uc885\ud569\\)\\s*.*$", "", news_title)
   # 4. For longer texts (with article content), truncate to 150 chars
   news_title <- sapply(news_title, function(x) {
     if (nchar(x) > 150) {
